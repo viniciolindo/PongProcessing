@@ -1,6 +1,8 @@
 Player p1; // Racchetta sinistra
 Player p2; // Racchetta destra
 
+Ball b;
+
 void setup() {
   size(800, 600);
   
@@ -10,6 +12,8 @@ void setup() {
   
   // P2 a destra (distante 30px dal bordo destro)
   p2 = new Player(width - 30); 
+  
+  b = new Ball(color(255),30);
 }
 
 void draw() {
@@ -32,4 +36,6 @@ void draw() {
   }
   
   // Qui disegneresti la pallina...
+  b.update();
+  b.display();
 }
